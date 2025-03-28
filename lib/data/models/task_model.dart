@@ -2,11 +2,11 @@ import '../../domain/entities/task.dart';
 
 class TaskModel extends Task {
   TaskModel({
-    required int id,
-    required String nombre,
-    required String detalle,
-    required String estado,
-  }) : super(id: id, nombre: nombre, detalle: detalle, estado: estado);
+    super.id,
+    required super.nombre,
+    required super.detalle,
+    required super.estado,
+  });
 
   factory TaskModel.fromJson(Map<String, dynamic> json) {
     return TaskModel(
@@ -18,11 +18,6 @@ class TaskModel extends Task {
   }
 
   Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'nombre': nombre,
-      'detalle': detalle,
-      'estado': estado,
-    };
+    return {'id': id, 'nombre': nombre, 'detalle': detalle, 'estado': estado};
   }
 }

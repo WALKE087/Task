@@ -1,10 +1,10 @@
 import '../../domain/entities/task.dart';
 import '../../domain/repositories/task_repository.dart';
-import '../datasources/local_task_datasource.dart';
+import '../datasources/remote_task_datasource.dart';
 import '../models/task_model.dart';
 
 class TaskRepositoryImpl implements TaskRepository {
-  final LocalTaskDataSource dataSource;
+  final RemoteTaskDataSource dataSource;
 
   TaskRepositoryImpl(this.dataSource);
 
